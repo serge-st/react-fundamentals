@@ -1,4 +1,4 @@
-import cl from './Login.module.css'
+import './Login.css'
 import { FC, useContext, FormEvent } from 'react'
 import Button from '../../components/UI/Button/Button'
 import Input from '../../components/UI/Input/Input'
@@ -18,7 +18,7 @@ const Login: FC = () => {
     !height
       ? null
       : <div
-          className={cl.login}
+          className="login"
           style={{
             height
           }}

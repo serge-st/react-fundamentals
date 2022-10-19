@@ -1,4 +1,4 @@
-import cl from './PostItem.module.css'
+import './PostItem.css'
 import { FC } from 'react'
 import Button from '../UI/Button/Button'
 import { useHistory } from 'react-router-dom'
@@ -21,7 +21,7 @@ const PostItem: FC<PostItemProps> = ({ post: { title, body, id }, remove }) => {
   const history = useHistory()
 
   return (
-    <div className={cl.post}>
+    <div className="post">
       <div>
         <strong>
           {id}. {title}
@@ -30,7 +30,7 @@ const PostItem: FC<PostItemProps> = ({ post: { title, body, id }, remove }) => {
           {body}
         </div>
       </div>
-      <div className={cl.post__btns}>
+      <div className="post__btns">
         <Button name='Open' onClick={() => history.push(`/posts/${id}`)} />
         <Button name='Delete' onClick={() => remove(id)} />
       </div>

@@ -1,4 +1,4 @@
-import cl from './Navbar.module.css'
+import './Navbar.css'
 import { FC, useContext, useEffect, useRef, useState } from 'react'
 import { Link } from 'react-router-dom'
 import { AuthCountext, LOCAL_STORAGE_AUTH_KEY } from '../../../context'
@@ -13,9 +13,9 @@ const Navbar: FC = () => {
   }
 
   return (
-    <nav className={cl.navbar}>
+    <nav className="navbar">
       <Button name='Logout' onClick={logout} />
-      <div className={cl.navbar__links}>
+      <div className="navbar__links">
         <Link to='/about'>About</Link>
         <Link to='/posts'>Posts</Link>
       </div>

@@ -1,6 +1,6 @@
 import { FC } from 'react'
 import { useHeight } from '../../hooks/useHeight'
-import cl from './About.module.css'
+import './About.css'
 
 const About: FC = () => {
   const height = useHeight('nav')
@@ -9,7 +9,7 @@ const About: FC = () => {
     !height
       ? null
       : <div
-          className={cl.about}
+          className=".about"
           style={{
             height
           }}

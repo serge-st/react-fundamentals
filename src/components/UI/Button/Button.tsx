@@ -1,5 +1,5 @@
 import { FC } from 'react'
-import classes from './Button.module.css'
+import './Button.css'
 
 interface ButtonProps extends React.ComponentPropsWithoutRef<'button'> {
   name: string
@@ -7,7 +7,7 @@ interface ButtonProps extends React.ComponentPropsWithoutRef<'button'> {
 
 const Button: FC<ButtonProps> = ({ name, ...attributes }) => {
   return (
-    <button {...attributes} className={classes.myBtn}>
+    <button {...attributes} className="myBtn">
       {name}
     </button>
   )

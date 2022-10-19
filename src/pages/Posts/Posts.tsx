@@ -1,4 +1,4 @@
-import cl from './Posts.module.css'
+import './Posts.css'
 import { FC, useEffect, useState } from 'react'
 import PostService from '../../API/PostService'
 import PostFilter, { FilterOptions } from '../../components/PostFilter'
@@ -48,7 +48,7 @@ const Posts: FC = () => {
   }
 
   return (
-    <div className={cl.posts__container}>
+    <div className="posts__container">
       <Button
         name='Create Post'
         onClick={() => setModal(true)}
@@ -57,7 +57,7 @@ const Posts: FC = () => {
         <PostForm create={createPost} />
       </Modal>
 
-      <hr className={cl.posts__hr} />
+      <hr className="posts__hr" />
 
       <PostFilter
         filter={filter}

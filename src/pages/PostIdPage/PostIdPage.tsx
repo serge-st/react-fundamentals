@@ -1,4 +1,4 @@
-import cl from './PostIdPage.module.css'
+import './PostIdPage.css'
 import { FC, useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
 import PostService from '../../API/PostService'
@@ -36,22 +36,22 @@ const PostIdPage: FC = () => {
       {(post == null) || isLoading || isCommentsLoading
         ? <Loader />
         : <div>
-          <h1 className={cl.post__header}>{capitalize(post?.title)}</h1>
-          <div className={cl.post__container}>
+          <h1 className="post__header">{capitalize(post?.title)}</h1>
+          <div className="post__container">
             <h3>Post ID: {id}</h3>
             <h3>Description:</h3>
             <p>{post?.body}</p>
           </div>
-          <h3 className={cl.comments__header}>Comments:</h3>
+          <h3 className="comments__header">Comments:</h3>
           <div>
             {comments.map(comm =>
               <div
-                className={cl.comment}
+                className="comment"
                 key={comm.id}
               >
                 <h5>User: {comm.email}</h5>
                 <h5>Comment:</h5>
-                <p className={cl.comment__body}>
+                <p className="comment__body">
                   {comm.body}
                   <hr />
                 </p>
