@@ -2,7 +2,7 @@
   "name": "react-fundamentals",
   "version": "1.0.0",
   "description": "",
-  "source": "/public/index.html",
+  "source": "./public/index.html",
   "ts-standard": {
     "project": "./tsconfig.json"
   },
